@@ -1,0 +1,13 @@
+name: Contexts 
+on: push
+jobs: 
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.actor }}" # github コンテキストの参照 actor
+      - run: echo "${{ github.head_ref }}" # github コンテキストの参照 head_ref
+      - run: echo "${{ github.workspace }}" # github コンテキストの参照 head_ref
+      - run: echo "${{ github.repository }}" # github コンテキストの参照 head_ref
+      - run: echo "${{ github.repository_owner }}" # github コンテキストの参照 head_ref
+      - run: echo "${{ github.event.pull_request.title }}" # github コンテキストの参照 head_ref
+      
