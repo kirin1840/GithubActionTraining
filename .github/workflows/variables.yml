@@ -1,3 +1,4 @@
+# Variablesの参照
 name: Variables
 on: push 
 jobs: 
