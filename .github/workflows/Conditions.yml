@@ -2,10 +2,10 @@ name: Condition
 on: push
 jobs: 
     skip-or-run:
-        runs-on: ubuntsu-latest
+        runs-on: ubuntu-latest
         steps:
           - run: echo "${CONTEXT}"
             env: 
               CONTEXT: ${{ toJSON(github) }} # githubコンテキストをJSON文字列でダンプ
           - run: echo "Hello"
-            if: ${{ contains(github.repository_owner, 'kirin' )}} 
+            if: ${{ contains(github.run_id, '1' )}} 
