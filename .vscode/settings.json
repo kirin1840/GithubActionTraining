@@ -1,0 +1,6 @@
+{
+    "github-actions.workflows.pinned.workflows": [
+        ".github/workflows/Compare.yml",
+        ".github/workflows/blank.yml"
+    ]
+}
