@@ -6,8 +6,7 @@ jobs:
         steps:
             - run: printenv | grep '_FUNC'
               env: 
-                CONTAINS_FUNC: ${{ contains('Hello','ell') }}　　　　# ell で含むか？
+                CONTAINS_FUNC: ${{ contains('Hello','ell') }}   # ell を含むか？
                 STARTS_WITH_FUNC: ${{ startsWith( 'Hello','He' ) }} # Heで始まるか？
                 ENDS_WITH_FUNC: ${{ endsWith('Hello','lo')}} # loで終わるか
                 CONTAINS_ARRAY_FUNC: ${{ contains(github.event.issue.labels.*.name, 'bug')}} #配列に「bug」を含むか
-                
