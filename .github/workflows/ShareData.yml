@@ -1,0 +1,14 @@
+name: GITHUB_OUTPUT
+on: push
+jobs:
+  share: 
+    name: data share each step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set value at Github Output
+        id: source
+        run: echo "result=Hello"  >> "${GITHUB_OUTPUT}"  
+      - name: Get value from Github Output
+        env: 
+          RESULT: ${{steps.source.outputs.result }}
+        run: echo "${RESULT}"
