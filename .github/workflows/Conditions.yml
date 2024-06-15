@@ -4,5 +4,8 @@ jobs:
     skip-or-run:
         runs-on: ubuntsu-latest
         steps:
+          - run: echo "${CONTEXT}"
+            env: 
+              CONTEXT: ${{ toJSON(github) }} # githubコンテキストをJSON文字列でダンプ
           - run: echo "Hello"
             if: ${{ contains(github.repository_owner, 'kirin' )}} 
