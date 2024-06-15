@@ -10,7 +10,7 @@ jobs:
         run: echo "${RESULT}" # 環境変数として参照
       - name: GET GITHUB ENV
         run: echo "${{ env.RESULT}}"
-      - name: Export GITHUB INFO
+      - name: Export GITHUB ENV INFO
         run: echo "${CONTEXT}"
         env: 
           CONTEXT: ${{ toJSON(env) }} # githubコンテキストをJSON文字列でダンプ

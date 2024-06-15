@@ -12,3 +12,7 @@ jobs:
         env: 
           RESULT: ${{steps.source.outputs.result }}
         run: echo "${RESULT}"
+      - name: Export GITHUB OUTPUT INFO
+        run: echo "${CONTEXT}"
+        env: 
+          CONTEXT: ${{ toJSON(steps) }} # githubコンテキストをJSON文字列でダンプ
